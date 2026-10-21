@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Traditional Punjabi Weddings 101 - Wedding Day Rituals: Interactive Guide</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Hotspot Activity Layout Styling */
+    .hotspot-section {
+      margin-top: 25px;
+      margin-bottom: 30px;
+    }
+
+    .hotspot-container {
+      position: relative;
+      max-width: 650px;
+      margin: 15px auto 4px auto;
+      border: 3px solid #d4af37;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .hotspot-container img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Clickable Hotspot Pins */
+    .pin {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-color: #800020;
+      color: #ffd700;
+      border: 2px solid #ffd700;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .pin:hover {
+      transform: scale(1.2);
+      background-color: #d4af37;
+      color: #800020;
+    }
+
+    /* Pin Coordinates for Activity 1 (Baraat & Milni) */
+    .pin-1-1 { top: 48%; left: 18%; } /* Groom */
+    .pin-1-2 { top: 52%; left: 48%; } /* Milni Greeting & Gift Exchange */
+    .pin-1-3 { top: 48%; left: 32%; } /* Baraat Wedding Procession Group */
+
+    /* Pin Coordinates for Activity 2 (Anand Karaj) */
+    .pin-2-1 { top: 25%; left: 50%; } /* Sri Guru Granth Sahib */
+    .pin-2-2 { top: 62%; left: 45%; } /* Groom & Bride */
+    .pin-2-3 { top: 68%; left: 54%; } /* Palla Scarf */
+    .pin-2-4 { top: 70%; left: 20%; } /* Sangat Floor Seating */
+
+    /* Info Display Box */
+    .info-box {
+      background-color: #f0f7f4;
+      border-left: 6px solid #1b4332;
+      padding: 16px;
+      margin-top: 15px;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      min-height: 50px;
+      text-align: left;
+    }
+
+    .ai-note {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #800020;
+      font-weight: bold;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .image-caption {
+      font-size: 0.8rem;
+      color: #666666;
+      font-style: italic;
+      text-align: center;
+      margin-top: 6px;
+      margin-bottom: 15px;
+    }
+
+    /* Bottom Navigation Button Container */
+    .next-page-container {
+      margin-top: 35px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .next-page-btn {
+      display: inline-block;
+      padding: 12px 26px;
+      background-color: #800020;
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: bold;
+      text-decoration: none;
+      border: 3px solid #d4af37;
+      border-radius: 30px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .next-page-btn:hover {
+      background-color: #d4af37;
+      color: #800020;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Header Section -->
+    <header>
+      <h1>Traditional Punjabi Weddings 101</h1>
+      <h2>Wedding Day Rituals: Interactive Guide</h2>
+      <p>By Sukhman Sandhu</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="page2.html">History & Traditions</a>
+      <a href="page3.html">Pre-Wedding</a>
+      <a href="page4.html">Anand Karaj</a>
+      <a href="page5.html" class="active">Wedding Day Rituals: Interactive Guide</a>
+      <a href="flashcard.html">Key Rituals & Terminology Practice</a>
+    </nav>
+
+    <!-- Activity 1: Baraat Arrival & Milni Ceremony -->
+    <section class="intro-section hotspot-section">
+      <h2>1. Baraat Arrival & Milni Ceremony</h2>
+      <p class="ai-note">Interactive activity generated through AI Google Gemini</p>
+      <p>Click the numbered pins on the image to inspect key focal points of the outdoor arrival ceremony:</p>
+
+      <div class="hotspot-container">
+        <img src="img/milni_outside.jpg" alt="Baraat arrival and Milni ceremony taking place outdoors in front of a white Gurdwara sanctuary">
+        <div class="pin pin-1-1" onclick="showInfo('infoBox1', 1, 1)">1</div>
+        <div class="pin pin-1-2" onclick="showInfo('infoBox1', 1, 2)">2</div>
+        <div class="pin pin-1-3" onclick="showInfo('infoBox1', 1, 3)">3</div>
+      </div>
+      <p class="image-caption">AI generated image from Google Gemini</p>
+
+      <div id="infoBox1" class="info-box">
+        <strong>💡 Click a pin on the image above to learn about that focal point!</strong>
+      </div>
+    </section>
+
+    <!-- Activity 2: Inside the Anand Karaj Ceremony -->
+    <section class="objectives-section hotspot-section">
+      <h2>2. Inside the Anand Karaj Ceremony</h2>
+      <p class="ai-note">Interactive activity generated through AI Google Gemini</p>
+      <p>Click the numbered pins on the diagram to explore the elements of the sacred Sikh ceremony:</p>
+
+      <div class="hotspot-container">
+        <img src="img/wedding_inside.jpg" alt="Sikh Anand Karaj wedding ceremony inside a Gurdwara sanctuary">
+        <div class="pin pin-2-1" onclick="showInfo('infoBox2', 2, 1)">1</div>
+        <div class="pin pin-2-2" onclick="showInfo('infoBox2', 2, 2)">2</div>
+        <div class="pin pin-2-3" onclick="showInfo('infoBox2', 2, 3)">3</div>
+        <div class="pin pin-2-4" onclick="showInfo('infoBox2', 2, 4)">4</div>
+      </div>
+      <p class="image-caption">AI generated image from Google Gemini</p>
+
+      <div id="infoBox2" class="info-box">
+        <strong>💡 Click a pin on the image above to learn about that focal point!</strong>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation Button -->
+    <div class="next-page-container">
+      <a href="flashcard.html" class="next-page-btn">Next: Key Rituals & Terminology Practice ➔</a>
+    </div>
+  </main>
+
+  <!-- JavaScript for Interactive Hotspots -->
+  <script>
+    // Content Data for Both Hotspot Diagrams
+    const hotspotData = {
+      1: {
+        1: "<strong>Pin 1: The Groom:</strong> The groom stands prominently wearing a regal ceremonial turban and traditional embellished wedding sherwani.",
+        2: "<strong>Pin 2: Milni & Gift Exchange:</strong> Corresponding male elders from both families meet at the entrance to embrace, exchange flower garlands, and share gifts of greeting.",
+        3: "<strong>Pin 3: Baraat Procession Group:</strong> The groom's joyful family, friends, and relatives who accompany him to the venue with live dhol music, dancing, and celebration."
+      },
+      2: {
+        1: "<strong>Pin 1: Sri Guru Granth Sahib Ji:</strong> The central holy Sikh scripture resting on an elevated, decorated altar, in whose presence the sacred vows are solemnized.",
+        2: "<strong>Pin 2: The Groom & Bride:</strong> The groom wearing a royal turban and the bride in a red embroidered lehenga sit side-by-side as equals facing the holy scripture.",
+        3: "<strong>Pin 3: The Palla Scarf:</strong> A long ceremonial woven scarf placed in the bride's hand by her father, physically joining the couple for the four sacred Laavan rounds.",
+        4: "<strong>Pin 4: Sangat (Floor Seating):</strong> All congregants sit together on the carpeted floor as equals before the holy scripture, reflecting complete spiritual and social equality."
+      }
+    };
+
+    // Displays the hotspot detail inside the targeted info box
+    function showInfo(boxId, activityId, pinId) {
+      const infoContainer = document.getElementById(boxId);
+      if (hotspotData[activityId] && hotspotData[activityId][pinId]) {
+        infoContainer.innerHTML = hotspotData[activityId][pinId];
+      }
+    }
+  </script>
+</body>
+</html>

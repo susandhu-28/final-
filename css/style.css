@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* Muted Jewel Gradient: Soft Emerald, Slate Sapphire, & Dusty Crimson */
+  background: linear-gradient(135deg, #1c3b32 0%, #22374a 50%, #3e273a 100%);
+  background-attachment: fixed;
+  color: #2b2b2b;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.6;
+  text-align: center;
+}
+
+main {
+  width: 85%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Royal Sapphire Header */
+header {
+  margin-bottom: 24px;
+  padding: 34px 24px;
+  background: linear-gradient(135deg, #0d2b45 0%, #1d4e89 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  border: 3px solid #d4af37; /* Antique Gold Border */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+header h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 2.4rem;
+  font-family: Georgia, serif;
+  color: #f4d06f; /* Warm Champagne Gold */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+header h2 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: #ffffff;
+  font-style: italic;
+}
+
+header p {
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  color: #e0e8f0;
+}
+
+/* Navigation Menu with Regal Amethyst Buttons */
+nav {
+  margin-bottom: 26px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 4px;
+  padding: 11px 18px;
+  background-color: #4a154b; /* Royal Amethyst */
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  border: 2px solid #d4af37;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #d4af37; /* Gold Hover */
+  color: #4a154b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(212, 175, 55, 0.35);
+}
+
+nav a.active {
+  background-color: #d4af37;
+  color: #4a154b;
+  border: 2px solid #4a154b;
+}
+
+/* Crisp White Content Cards for High Readability against Muted Background */
+.intro-section,
+.objectives-section,
+.nav-guide-section {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  padding: 26px;
+  background-color: #ffffff;
+  border: 2px solid #d4af37;
+  border-radius: 14px;
+  border-top: 5px solid #800020; /* Deep Ruby Top Accent Line */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+.intro-section h2,
+.objectives-section h2,
+.nav-guide-section h2 {
+  margin-top: 0;
+  color: #800020; /* Ruby Maroon Headings */
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  padding-bottom: 4px;
+  font-size: 1.5rem;
+}
+
+/* Flex Content Layout */
+.content-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+  margin-top: 15px;
+}
+
+.content-text {
+  flex: 1 1 350px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-image {
+  flex: 0 1 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #d4af37;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+  margin-top: 8px;
+  color: #666666;
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Bullet Lists */
+ul {
+  padding-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li strong {
+  color: #1d4e89; /* Sapphire Highlight Text */
+}
+
+/* Deep Emerald Green Highlight Box */
+.highlight-box {
+  padding: 16px 20px;
+  background-color: #f0f7f4;
+  border-left: 6px solid #1b4332; /* Emerald Green Accent */
+  border-radius: 8px;
+  margin-top: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.highlight-box strong {
+  color: #1b4332;
+}
+
+/* Mobile Responsive */
+@media (max-width: 700px) {
+  main {
+    width: 94%;
+    padding: 8px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .content-text,
+  .content-image {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px 0;
+    border-radius: 8px;
+  }
+}

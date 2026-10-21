@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Traditional Punjabi Weddings 101 - Key Rituals & Terminology Practice</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Internal CSS for Flashcard Grid, Images, Flip Animation & Speaker Icon -->
+  <style>
+    /* Section Title & Subtitle Styling */
+    .flashcard-header-container {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .main-activity-title {
+      color: #800020;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      border-bottom: 2px solid #d4af37;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .instruction-text {
+      font-size: 1rem;
+      color: #800020;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .ai-note {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #555555;
+      margin-top: 4px;
+    }
+
+    /* Flashcard Grid Layout - Balanced 8 Cards */
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 15px;
+    }
+
+    /* Card Wrapper (3D Perspective) */
+    .card-wrapper {
+      background-color: transparent;
+      perspective: 1000px;
+      height: 320px;
+      cursor: pointer;
+    }
+
+    /* Inner Container handling 3D Flip Rotation */
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s ease-in-out;
+      transform-style: preserve-3d;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Class applied via JS to flip card */
+    .card-wrapper.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Common Card Face Styling */
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border: 3px solid #d4af37;
+      border-radius: 14px;
+      padding: 16px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Front Face Styling */
+    .card-front {
+      background-color: #ffffff;
+      color: #800020;
+    }
+
+    /* Centered Image above word */
+    .card-front img {
+      width: 100%;
+      max-width: 210px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #d4af37;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .card-front-caption {
+      font-size: 0.7rem;
+      color: #777777;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .card-term {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #800020;
+      margin-bottom: 4px;
+    }
+
+    .flip-hint {
+      font-size: 0.8rem;
+      color: #d4af37;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+
+    /* Back Face Styling */
+    .card-back {
+      background-color: #fcf8f2;
+      color: #2b2b2b;
+      transform: rotateY(180deg);
+      border-color: #800020;
+      justify-content: space-between;
+      padding: 22px 18px;
+    }
+
+    /* Header on Card Back with Term and Speaker Button */
+    .card-back-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      border-bottom: 2px solid #d4af37;
+      padding-bottom: 8px;
+    }
+
+    .card-back-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #800020;
+    }
+
+    /* Speaker Audio Icon Button */
+    .speaker-btn {
+      background: #800020;
+      color: #ffd700;
+      border: 1px solid #d4af37;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .speaker-btn:hover {
+      background: #d4af37;
+      color: #800020;
+      transform: scale(1.15);
+    }
+
+    .card-def {
+      font-size: 0.95rem;
+      color: #1d4e89;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      text-align: center;
+      margin: auto 0;
+    }
+
+    /* Next Page Button Container */
+    .next-page-container {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    .next-page-btn {
+      display: inline-block;
+      padding: 12px 26px;
+      background-color: #800020;
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: bold;
+      text-decoration: none;
+      border: 3px solid #d4af37;
+      border-radius: 30px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .next-page-btn:hover {
+      background-color: #d4af37;
+      color: #800020;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Header Section -->
+    <header>
+      <h1>Traditional Punjabi Weddings 101</h1>
+      <h2>Key Rituals & Terminology Practice</h2>
+      <p>By Sukhman Sandhu</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="page2.html">History & Traditions</a>
+      <a href="page3.html">Pre-Wedding</a>
+      <a href="page4.html">Anand Karaj</a>
+      <a href="page5.html">Wedding Day</a>
+      <a href="flashcard.html" class="active">Key Rituals & Terminology Practice</a>
+    </nav>
+
+    <!-- Main Flashcard Section -->
+    <section class="intro-section">
+      <div class="flashcard-header-container">
+        <div class="main-activity-title">Key Rituals & Terminology Practice</div>
+        <p class="instruction-text">💡 Tap or click any card to flip it and review its meaning. Click the 🔊 speaker icon to listen to the pronunciation!</p>
+        <p class="ai-note">Interactive activity generated through AI Google Gemini</p>
+      </div>
+
+      <!-- Flashcard Grid (8 Cards Total) -->
+      <div class="flashcards-grid">
+
+        <!-- Card 1: Roka -->
+        <div class="card-wrapper" onclick="toggleCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="img/roka.jpg" alt="Roka ceremony gift exchange">
+              <span class="card-front-caption">AI generated image from Google Gemini</span>
+              <div class="card-term">Roka / Thaka</div>
+              <span class="flip-hint">(Click to flip)</span>
+            </div>
+            <div class="card-back">
+              <div class="card-back-header">
+                <span class="card-back-title">Roka & Thaka</span>
+                <button class="speaker-btn" onclick="speakTerm(event, 'Roka')">🔊</button>
+              </div>
+              <p class="card-def">The official match announcement and exchange of gifts between families before wedding celebrations begin.</p>
+              <span class="flip-hint">(Click to flip back)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Maiyan / Haldi -->
+        <div class="card-wrapper" onclick="toggleCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="img/haldi.jpg" alt="Maiyan Haldi ceremony paste application">
+              <span class="card-front-caption">AI generated image from Google Gemini</span>
+              <div class="card-term">Maiyan / Haldi</div>
+              <span class="flip-hint">(Click to flip)</span>
+            </div>
+            <div class="card-back">
+              <div class="card-back-header">
+                <span class="card-back-title">Maiyan / Haldi</span>
+                <button class="speaker-btn" onclick="speakTerm(event, 'Maiyan')">🔊</button>
+              </div>
+              <p class="card-def">A cleansing and purification ritual where turmeric paste (vatna) is applied to the bride and groom for a natural radiant glow.</p>
+              <span class="flip-hint">(Click to flip back)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Mehndi -->
+        <div class="card-wrapper" onclick="toggleCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="img/mehndi.jpg" alt="Mehndi henna art on hands">
+              <span class="card-front-caption">AI generated image from Google Gemini</span>
+              <div class="card-term">Mehndi</div>
+              <span class="flip-hint">(Click to flip)</span>
+            </div>
+            <div class="card-back">
+              <div class="card-back-header">
+                <span class="card-back-title">Mehndi</span>
+                <button class="speaker-btn" onclick="speakTerm(event, 'Mehndi')">🔊</button>
+              </div>
+              <p class="card-def">Intricate henna designs applied to the bride's hands and feet, symbolizing deep love and good fortune for the marriage.</p>
+              <span class="flip-hint">(Click to flip back)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Sangeet & Jaggo -->
+        <div class="card-wrapper" onclick="toggleCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="img/sangeet.jpg" alt="Jaggo musical celebration with lit lamps">
+              <span class="card-front-caption">AI generated image from Google Gemini</span>
+              <div class="card-term">Sangeet & Jaggo</div>
+              <span class="flip-hint">(Click to flip)</span>
+            </div>
+            <div class="card-back">
+              <div class="card-back-header">
+                <span class="card-back-title">Jaggo</span>
+                <button class="speaker-btn" onclick="speakTerm(event, 'Jaggo')">🔊</button>
+              </div>
+              <p class="card-def">A lively celebration of folk music and dance where family members dance carrying decorated lit copper lamps on their heads.</p>
+              <span class="flip-hint">(Click to flip back)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Choora -->
+        <div class="card-wrapper" onclick="toggleCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="img/choora.jpg" alt="Red and white Choora bangles">
+              <span class="card-front-caption">AI generated image from Google Gemini</span>
+              <div class="card-term">Choora & Kalire</div>
+              <span class="flip-hint">(Click to flip)</span>
+            </div>
+            <div class="card-back">
+              <div class="card-back-header">
+                <span class="card-back-title">Choora</span>
+                <button class="speaker-btn" onclick="speakTerm(event, 'Choora')">🔊</button>
+              </div>
+              <p class="card-def">Red and white ceremonial bangles given by maternal uncles, paired with golden hanging umbrella charms (kalire) tied by friends.</p>
+              <span class="flip-hint">(Click to flip back)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Baraat -->
+        <div class="card-wrapper" onclick="toggleCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="img/banner.jpg" alt="Baraat wedding procession outdoor">
+              <span class="card-front-caption">AI generated image from Google Gemini</span>
+              <div class="card-term">Baraat</div>
+              <span class="flip-hint">(Click to flip)</span>
+            </div>
+            <div class="card-back">
+              <div class="card-back-header">
+                <span class="card-back-title">Baraat</span>
+                <button class="speaker-btn" onclick="speakTerm(event, 'Baraat')">🔊</button>
+              </div>
+              <p class="card-def">The groom's celebratory wedding procession arriving at the venue accompanied by live dhol drums, dancing, and music.</p>
+              <span class="flip-hint">(Click to flip back)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Anand Karaj -->
+        <div class="card-wrapper" onclick="toggleCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="img/anand_karaj.jpg" alt="Sacred Anand Karaj Sikh ceremony">
+              <span class="card-front-caption">AI generated image from Google Gemini</span>
+              <div class="card-term">Anand Karaj</div>
+              <span class="flip-hint">(Click to flip)</span>
+            </div>
+            <div class="card-back">
+              <div class="card-back-header">
+                <span class="card-back-title">Anand Karaj</span>
+                <button class="speaker-btn" onclick="speakTerm(event, 'Anand Karaj')">🔊</button>
+              </div>
+              <p class="card-def">Meaning "Blissful Union," the sacred Sikh marriage ceremony held in a Gurdwara centered around the four Laavan rounds.</p>
+              <span class="flip-hint">(Click to flip back)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: Vidaai -->
+        <div class="card-wrapper" onclick="toggleCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="img/banner.jpg" alt="Vidaai bridal farewell ceremony">
+              <span class="card-front-caption">AI generated image from Google Gemini</span>
+              <div class="card-term">Vidaai / Doli</div>
+              <span class="flip-hint">(Click to flip)</span>
+            </div>
+            <div class="card-back">
+              <div class="card-back-header">
+                <span class="card-back-title">Vidaai</span>
+                <button class="speaker-btn" onclick="speakTerm(event, 'Vidaai')">🔊</button>
+              </div>
+              <p class="card-def">The emotional farewell ceremony where the bride bids goodbye to her parental home, throwing rice over her head as a blessing of prosperity.</p>
+              <span class="flip-hint">(Click to flip back)</span>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- End Flashcards Grid -->
+    </section>
+
+    <!-- Bottom Navigation -->
+    <div class="next-page-container">
+      <a href="index.html" class="next-page-btn">↺ Return to Home Page</a>
+    </div>
+  </main>
+
+  <!-- JavaScript Section -->
+  <script>
+    // Toggle Card Flip Animation
+    function toggleCard(cardElement) {
+      cardElement.classList.toggle('flipped');
+    }
+
+    // Pronounce Punjabi Word using Web Speech Synthesis API
+    function speakTerm(event, termText) {
+      // Prevent the click event from flipping the card when clicking speaker icon
+      event.stopPropagation();
+
+      // Check browser support for Speech Synthesis
+      if ('speechSynthesis' in window) {
+        // Cancel any ongoing speech
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(termText);
+        
+        // Attempt to set Punjabi/Hindi voice accent if available on device
+        const voices = window.speechSynthesis.getVoices();
+        const punjabiVoice = voices.find(voice => voice.lang.includes('pa') || voice.lang.includes('hi'));
+        if (punjabiVoice) {
+          utterance.voice = punjabiVoice;
+        }
+
+        utterance.rate = 0.85; // Slightly slower speed for crisp educational pronunciation
+        utterance.pitch = 1.0;
+
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert("Audio speech synthesis is not supported in this browser.");
+      }
+    }
+
+    // Pre-load synthesis voices for responsive speech synthesis playback
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = function() {
+        window.speechSynthesis.getVoices();
+      };
+    }
+  </script>
+</body>
+</html>
